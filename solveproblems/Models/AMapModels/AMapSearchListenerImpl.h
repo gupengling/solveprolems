@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import "POIAnnotation.h"
+@class MANaviRoute;
+typedef NS_ENUM(NSInteger, AMapRoutePlanningType)
+{
+    AMapRoutePlanningTypeDrive = 0,
+    AMapRoutePlanningTypeWalk,
+    AMapRoutePlanningTypeBus
+};
 
-@interface AMapSearchListenerImpl : NSObject
+@interface AMapSearchListenerImpl : AMapSearchAPI<AMapSearchDelegate>
 
+@property (nonatomic, assign) AMapRoutePlanningType routePlanningType;
+/* 用于显示当前路线方案. */
+@property (nonatomic, strong) MANaviRoute * naviRoute;
+@property (nonatomic, strong) AMapRoute *route;
+/* 清空地图上已有的路线. */
+- (void)clearRoute;
 @end

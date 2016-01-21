@@ -12,12 +12,10 @@
 
 @interface CustomViewController ()
 
-@property (nonatomic, readonly) CustomNaviBarView *m_viewNaviBar;
 
 @end
 
 @implementation CustomViewController
-@synthesize m_viewNaviBar = _viewNaviBar;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -26,7 +24,8 @@
     if (self) {
         // Custom initialization
         
-        self.wantsFullScreenLayout = YES;
+//        self.wantsFullScreenLayout = YES;
+        self.automaticallyAdjustsScrollViewInsets = YES;
         
     }
     return self;
@@ -36,7 +35,9 @@
 {
     [super awakeFromNib];
     
-    self.wantsFullScreenLayout = YES;
+//    self.wantsFullScreenLayout = YES;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+
 }
 
 - (void)viewDidLoad

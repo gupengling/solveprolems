@@ -13,10 +13,17 @@
 @end
 
 @implementation TestViewController
-
+#pragma mark - CustomNaviBar UI
+- (void)initUI {
+    [self setNaviBarTitle:@"Test"];    // 设置标题
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self initUI];
+    
+    NSLog(@"%@",self.info.contentObj);
+    NSLog(@"%@",self.info.statusObj);
 }
 
 - (void)didReceiveMemoryWarning {

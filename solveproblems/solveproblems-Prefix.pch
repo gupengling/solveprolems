@@ -5,11 +5,68 @@
 //  Created by 51offer on 16/1/18.
 //  Copyright © 2016年 Jahnny. All rights reserved.
 //
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif
 
 #ifndef solveproblems_Prefix_pch
 #define solveproblems_Prefix_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//字符宏定义
+static NSString * const PLATEDATA = @"PLATEDATA";
+
+
+//自定义DLog样式,Debug模式下打印日志和当前行数
+#ifdef DEBUG
+# define DLog(format, ...) NSLog((@"\n[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d]\n"  format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...);
+#endif
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+/**
+ *单例
+ */
+#undef	GPL_H_SINGLETON
+#define GPL_H_SINGLETON( __class ) \
++ (__class *)sharedInstance;
+
+#undef	GPL_M_SINGLETON
+#define GPL_M_SINGLETON( __class ) \
++ (__class *)sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+
+
+/* 使用高德地图API，请注册Key，注册地址：http://lbs.amap.com/console/key */
+const static NSString *APIKey = @"7a35ba522178f9b549dba7814cec1ce3";
+const static NSString *TableID = @"solveproblems";
+
+
+
+#import "GlobalDefine.h"
+
+#import "Global.h"
+
 
 #endif /* solveproblems_Prefix_pch */

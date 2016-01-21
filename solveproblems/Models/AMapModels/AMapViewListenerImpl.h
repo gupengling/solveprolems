@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MAMapKit/MAMapKit.h>
 
-@interface AMapViewListenerImpl : NSObject
+@interface AMapViewListenerImpl : MAMapView<MAMapViewDelegate>
 
 @end

@@ -37,7 +37,7 @@
 
 + (CGRect)rightBtnFrame
 {
-    return Rect(258.0f, 22.0f, [[self class] barBtnSize].width, [[self class] barBtnSize].height);
+    return Rect(ScreenWidth-[[self class] barBtnSize].width-10, 22.0f, [[self class] barBtnSize].width, [[self class] barBtnSize].height);
 }
 
 + (CGSize)barBtnSize
@@ -47,12 +47,12 @@
 
 + (CGSize)barSize
 {
-    return Size(320.0f, 64.0f);
+    return Size(ScreenWidth, 64.0f);
 }
 
 + (CGRect)titleViewFrame
 {
-    return Rect(65.0f, 22.0f, 190.0f, 40.0f);
+    return Rect((ScreenWidth-190.)/2., 22.0f, 190.0f, 40.0f);
 }
 
 // 创建一个导航条按钮：使用默认的按钮图片。

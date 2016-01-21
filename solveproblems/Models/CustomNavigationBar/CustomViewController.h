@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CustomNaviBarView;
 @interface CustomViewController : UIViewController
+@property (nonatomic, readonly) CustomNaviBarView *viewNaviBar;
 
 - (void)bringNaviBarToTopmost;
 

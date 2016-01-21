@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define MLNAVIGATION (((AppDelegate *)[UIApplication sharedApplication].delegate).navController)
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navController;
 
 
 @end

@@ -13,10 +13,26 @@
 @end
 
 @implementation HomeViewController
+#pragma mark - CustomNaviBar UI
+- (void)initUI
+{
+    [self setNaviBarTitle:@"Home"];    // 设置标题
+    
+    // 创建一个自定义的按钮，并添加到导航条右侧。
+    UIButton *btnNaviRight = [CustomNaviBarView createNormalNaviBarBtnByTitle:@"Test" target:self action:@selector(btnNext:)];
+    [self setNaviBarRightBtn:btnNaviRight];
 
+}
+- (void)btnNext:(id)sender {
+
+    BaseVCInfo *info = [BaseVCInfo infoWithVCName:@"TestViewController" contentObj:@"content" statusObj:@"status"];
+    BaseViewController *vc = [BaseViewController vcWithVCInfo:info];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self initUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +49,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+}
+
 
 @end

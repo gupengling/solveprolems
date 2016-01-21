@@ -7,15 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF1D05931C4CC59700173FA4 /* UtilityFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D058A1C4CC59700173FA4 /* UtilityFunc.m */; };
+		DF1D05941C4CC59700173FA4 /* CustomNaviBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D058C1C4CC59700173FA4 /* CustomNaviBarView.m */; };
+		DF1D05951C4CC59700173FA4 /* CustomNaviBarSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D058E1C4CC59700173FA4 /* CustomNaviBarSearchController.m */; };
+		DF1D05961C4CC59700173FA4 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05901C4CC59700173FA4 /* CustomNavigationController.m */; };
+		DF1D05971C4CC59700173FA4 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05921C4CC59700173FA4 /* CustomViewController.m */; };
+		DF1D059A1C4CC93700173FA4 /* AppNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05991C4CC93700173FA4 /* AppNavigationController.m */; };
+		DF1D059D1C4CCD4F00173FA4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D059C1C4CCD4F00173FA4 /* BaseViewController.m */; };
+		DF1D05A01C4CDA0D00173FA4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D059F1C4CDA0D00173FA4 /* HomeViewController.m */; };
+		DF1D05A41C4CDB7100173FA4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05A21C4CDB7100173FA4 /* TestViewController.m */; };
+		DF1D05A51C4CDB7100173FA4 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1D05A31C4CDB7100173FA4 /* TestViewController.xib */; };
+		DF1D05A91C4CE25100173FA4 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D05A81C4CE25100173FA4 /* MAMapKit.framework */; };
+		DF1D05AB1C4CE26700173FA4 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D05AA1C4CE26700173FA4 /* AMapSearchKit.framework */; };
+		DF1D05B01C4CE92300173FA4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D05AF1C4CE92300173FA4 /* libz.tbd */; };
+		DF1D05B21C4CE93100173FA4 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D05B11C4CE93100173FA4 /* libstdc++.6.0.9.tbd */; };
+		DF1D05B41C4CF0FE00173FA4 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DF1D05B31C4CF0FE00173FA4 /* AMap.bundle */; };
+		DF1D05B81C4CF2F400173FA4 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1D05B51C4CF2F400173FA4 /* compass.png */; };
+		DF1D05B91C4CF2F400173FA4 /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1D05B61C4CF2F400173FA4 /* compass@2x.png */; };
+		DF1D05BA1C4CF2F400173FA4 /* compass@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1D05B71C4CF2F400173FA4 /* compass@3x.png */; };
+		DF1D05BC1C4CF68A00173FA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D05BB1C4CF68A00173FA4 /* MapKit.framework */; };
+		DF1D05BE1C4CF6B000173FA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D05BD1C4CF6B000173FA4 /* QuartzCore.framework */; };
+		DF1D05C21C4DDF0D00173FA4 /* POIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05C11C4DDF0D00173FA4 /* POIAnnotation.m */; };
+		DF1D05C51C4DE07F00173FA4 /* AMapSearchListenerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05C41C4DE07F00173FA4 /* AMapSearchListenerImpl.m */; };
+		DF1D05C81C4DE24F00173FA4 /* AMapViewListenerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05C71C4DE24F00173FA4 /* AMapViewListenerImpl.m */; };
 		DF31725F1C4C886300E6FD8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF31725E1C4C886300E6FD8D /* main.m */; };
 		DF3172621C4C886300E6FD8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3172611C4C886300E6FD8D /* AppDelegate.m */; };
 		DF3172651C4C886300E6FD8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3172641C4C886300E6FD8D /* ViewController.m */; };
 		DF3172681C4C886300E6FD8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3172661C4C886300E6FD8D /* Main.storyboard */; };
 		DF31726A1C4C886300E6FD8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3172691C4C886300E6FD8D /* Assets.xcassets */; };
 		DF31726D1C4C886300E6FD8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF31726B1C4C886300E6FD8D /* LaunchScreen.storyboard */; };
+		DF3172781C4C8D0100E6FD8D /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3172771C4C8D0100E6FD8D /* Global.m */; };
+		DFCFB70C1C4F8D04003D9927 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7051C4F8D04003D9927 /* MANaviRoute.m */; };
+		DFCFB70D1C4F8D04003D9927 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7071C4F8D04003D9927 /* MANaviPolyline.m */; };
+		DFCFB70E1C4F8D04003D9927 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7091C4F8D04003D9927 /* MANaviAnnotation.m */; };
+		DFCFB70F1C4F8D04003D9927 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB70B1C4F8D04003D9927 /* LineDashPolyline.m */; };
+		DFCFB7121C4F8D5F003D9927 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7111C4F8D5F003D9927 /* CommonUtility.m */; };
+		DFCFB7171C4F9286003D9927 /* endPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7131C4F9286003D9927 /* endPoint.png */; };
+		DFCFB7181C4F9286003D9927 /* endPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7141C4F9286003D9927 /* endPoint@2x.png */; };
+		DFCFB7191C4F9286003D9927 /* startPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7151C4F9286003D9927 /* startPoint.png */; };
+		DFCFB71A1C4F9286003D9927 /* startPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7161C4F9286003D9927 /* startPoint@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF1D05881C4CC59700173FA4 /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
+		DF1D05891C4CC59700173FA4 /* UtilityFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityFunc.h; sourceTree = "<group>"; };
+		DF1D058A1C4CC59700173FA4 /* UtilityFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityFunc.m; sourceTree = "<group>"; };
+		DF1D058B1C4CC59700173FA4 /* CustomNaviBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNaviBarView.h; sourceTree = "<group>"; };
+		DF1D058C1C4CC59700173FA4 /* CustomNaviBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNaviBarView.m; sourceTree = "<group>"; };
+		DF1D058D1C4CC59700173FA4 /* CustomNaviBarSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNaviBarSearchController.h; sourceTree = "<group>"; };
+		DF1D058E1C4CC59700173FA4 /* CustomNaviBarSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNaviBarSearchController.m; sourceTree = "<group>"; };
+		DF1D058F1C4CC59700173FA4 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		DF1D05901C4CC59700173FA4 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		DF1D05911C4CC59700173FA4 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		DF1D05921C4CC59700173FA4 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		DF1D05981C4CC93700173FA4 /* AppNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppNavigationController.h; sourceTree = "<group>"; };
+		DF1D05991C4CC93700173FA4 /* AppNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppNavigationController.m; sourceTree = "<group>"; };
+		DF1D059B1C4CCD4F00173FA4 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		DF1D059C1C4CCD4F00173FA4 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		DF1D059E1C4CDA0D00173FA4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DF1D059F1C4CDA0D00173FA4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DF1D05A11C4CDB7100173FA4 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		DF1D05A21C4CDB7100173FA4 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		DF1D05A31C4CDB7100173FA4 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		DF1D05A81C4CE25100173FA4 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		DF1D05AA1C4CE26700173FA4 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		DF1D05AF1C4CE92300173FA4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DF1D05B11C4CE93100173FA4 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		DF1D05B31C4CF0FE00173FA4 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		DF1D05B51C4CF2F400173FA4 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		DF1D05B61C4CF2F400173FA4 /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
+		DF1D05B71C4CF2F400173FA4 /* compass@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@3x.png"; sourceTree = "<group>"; };
+		DF1D05BB1C4CF68A00173FA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DF1D05BD1C4CF6B000173FA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DF1D05C01C4DDF0D00173FA4 /* POIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIAnnotation.h; sourceTree = "<group>"; };
+		DF1D05C11C4DDF0D00173FA4 /* POIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIAnnotation.m; sourceTree = "<group>"; };
+		DF1D05C31C4DE07F00173FA4 /* AMapSearchListenerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapSearchListenerImpl.h; sourceTree = "<group>"; };
+		DF1D05C41C4DE07F00173FA4 /* AMapSearchListenerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapSearchListenerImpl.m; sourceTree = "<group>"; };
+		DF1D05C61C4DE24F00173FA4 /* AMapViewListenerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapViewListenerImpl.h; sourceTree = "<group>"; };
+		DF1D05C71C4DE24F00173FA4 /* AMapViewListenerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapViewListenerImpl.m; sourceTree = "<group>"; };
 		DF31725A1C4C886300E6FD8D /* solveproblems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solveproblems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF31725E1C4C886300E6FD8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF3172601C4C886300E6FD8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +95,23 @@
 		DF3172691C4C886300E6FD8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF31726C1C4C886300E6FD8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF31726E1C4C886300E6FD8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF3172741C4C890800E6FD8D /* solveproblems-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "solveproblems-Prefix.pch"; sourceTree = "<group>"; };
+		DF3172761C4C8D0100E6FD8D /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		DF3172771C4C8D0100E6FD8D /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		DFCFB7041C4F8D04003D9927 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
+		DFCFB7051C4F8D04003D9927 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
+		DFCFB7061C4F8D04003D9927 /* MANaviPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviPolyline.h; sourceTree = "<group>"; };
+		DFCFB7071C4F8D04003D9927 /* MANaviPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviPolyline.m; sourceTree = "<group>"; };
+		DFCFB7081C4F8D04003D9927 /* MANaviAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviAnnotation.h; sourceTree = "<group>"; };
+		DFCFB7091C4F8D04003D9927 /* MANaviAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviAnnotation.m; sourceTree = "<group>"; };
+		DFCFB70A1C4F8D04003D9927 /* LineDashPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDashPolyline.h; sourceTree = "<group>"; };
+		DFCFB70B1C4F8D04003D9927 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
+		DFCFB7101C4F8D5F003D9927 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		DFCFB7111C4F8D5F003D9927 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		DFCFB7131C4F9286003D9927 /* endPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endPoint.png; sourceTree = "<group>"; };
+		DFCFB7141C4F9286003D9927 /* endPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "endPoint@2x.png"; sourceTree = "<group>"; };
+		DFCFB7151C4F9286003D9927 /* startPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startPoint.png; sourceTree = "<group>"; };
+		DFCFB7161C4F9286003D9927 /* startPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startPoint@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,15 +119,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1D05BE1C4CF6B000173FA4 /* QuartzCore.framework in Frameworks */,
+				DF1D05BC1C4CF68A00173FA4 /* MapKit.framework in Frameworks */,
+				DF1D05B21C4CE93100173FA4 /* libstdc++.6.0.9.tbd in Frameworks */,
+				DF1D05B01C4CE92300173FA4 /* libz.tbd in Frameworks */,
+				DF1D05AB1C4CE26700173FA4 /* AMapSearchKit.framework in Frameworks */,
+				DF1D05A91C4CE25100173FA4 /* MAMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF1D05871C4CC56500173FA4 /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				DF1D05981C4CC93700173FA4 /* AppNavigationController.h */,
+				DF1D05991C4CC93700173FA4 /* AppNavigationController.m */,
+				DF1D05881C4CC59700173FA4 /* GlobalDefine.h */,
+				DF1D05891C4CC59700173FA4 /* UtilityFunc.h */,
+				DF1D058A1C4CC59700173FA4 /* UtilityFunc.m */,
+				DF1D058B1C4CC59700173FA4 /* CustomNaviBarView.h */,
+				DF1D058C1C4CC59700173FA4 /* CustomNaviBarView.m */,
+				DF1D058D1C4CC59700173FA4 /* CustomNaviBarSearchController.h */,
+				DF1D058E1C4CC59700173FA4 /* CustomNaviBarSearchController.m */,
+				DF1D058F1C4CC59700173FA4 /* CustomNavigationController.h */,
+				DF1D05901C4CC59700173FA4 /* CustomNavigationController.m */,
+				DF1D05911C4CC59700173FA4 /* CustomViewController.h */,
+				DF1D05921C4CC59700173FA4 /* CustomViewController.m */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
+		DF1D05BF1C4DDF0700173FA4 /* AMapModels */ = {
+			isa = PBXGroup;
+			children = (
+				DFCFB7101C4F8D5F003D9927 /* CommonUtility.h */,
+				DFCFB7111C4F8D5F003D9927 /* CommonUtility.m */,
+				DFCFB7041C4F8D04003D9927 /* MANaviRoute.h */,
+				DFCFB7051C4F8D04003D9927 /* MANaviRoute.m */,
+				DFCFB7061C4F8D04003D9927 /* MANaviPolyline.h */,
+				DFCFB7071C4F8D04003D9927 /* MANaviPolyline.m */,
+				DFCFB7081C4F8D04003D9927 /* MANaviAnnotation.h */,
+				DFCFB7091C4F8D04003D9927 /* MANaviAnnotation.m */,
+				DFCFB70A1C4F8D04003D9927 /* LineDashPolyline.h */,
+				DFCFB70B1C4F8D04003D9927 /* LineDashPolyline.m */,
+				DF1D05C01C4DDF0D00173FA4 /* POIAnnotation.h */,
+				DF1D05C11C4DDF0D00173FA4 /* POIAnnotation.m */,
+				DF1D05C31C4DE07F00173FA4 /* AMapSearchListenerImpl.h */,
+				DF1D05C41C4DE07F00173FA4 /* AMapSearchListenerImpl.m */,
+				DF1D05C61C4DE24F00173FA4 /* AMapViewListenerImpl.h */,
+				DF1D05C71C4DE24F00173FA4 /* AMapViewListenerImpl.m */,
+			);
+			path = AMapModels;
+			sourceTree = "<group>";
+		};
 		DF3172511C4C886300E6FD8D = {
 			isa = PBXGroup;
 			children = (
+				DF1D05BD1C4CF6B000173FA4 /* QuartzCore.framework */,
+				DF1D05BB1C4CF68A00173FA4 /* MapKit.framework */,
+				DF1D05B11C4CE93100173FA4 /* libstdc++.6.0.9.tbd */,
+				DF1D05AF1C4CE92300173FA4 /* libz.tbd */,
 				DF31725C1C4C886300E6FD8D /* solveproblems */,
 				DF31725B1C4C886300E6FD8D /* Products */,
 			);
@@ -58,11 +197,20 @@
 		DF31725C1C4C886300E6FD8D /* solveproblems */ = {
 			isa = PBXGroup;
 			children = (
+				DF1D05B31C4CF0FE00173FA4 /* AMap.bundle */,
+				DF1D05AA1C4CE26700173FA4 /* AMapSearchKit.framework */,
+				DF1D05A81C4CE25100173FA4 /* MAMapKit.framework */,
+				DF3172751C4C8CDF00E6FD8D /* Models */,
 				DF3172601C4C886300E6FD8D /* AppDelegate.h */,
 				DF3172611C4C886300E6FD8D /* AppDelegate.m */,
 				DF3172631C4C886300E6FD8D /* ViewController.h */,
 				DF3172641C4C886300E6FD8D /* ViewController.m */,
 				DF3172661C4C886300E6FD8D /* Main.storyboard */,
+				DF1D059E1C4CDA0D00173FA4 /* HomeViewController.h */,
+				DF1D059F1C4CDA0D00173FA4 /* HomeViewController.m */,
+				DF1D05A11C4CDB7100173FA4 /* TestViewController.h */,
+				DF1D05A21C4CDB7100173FA4 /* TestViewController.m */,
+				DF1D05A31C4CDB7100173FA4 /* TestViewController.xib */,
 				DF3172691C4C886300E6FD8D /* Assets.xcassets */,
 				DF31726B1C4C886300E6FD8D /* LaunchScreen.storyboard */,
 				DF31726E1C4C886300E6FD8D /* Info.plist */,
@@ -75,8 +223,29 @@
 			isa = PBXGroup;
 			children = (
 				DF31725E1C4C886300E6FD8D /* main.m */,
+				DF3172741C4C890800E6FD8D /* solveproblems-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF3172751C4C8CDF00E6FD8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF1D05BF1C4DDF0700173FA4 /* AMapModels */,
+				DF1D05B51C4CF2F400173FA4 /* compass.png */,
+				DF1D05B61C4CF2F400173FA4 /* compass@2x.png */,
+				DF1D05B71C4CF2F400173FA4 /* compass@3x.png */,
+				DFCFB7131C4F9286003D9927 /* endPoint.png */,
+				DFCFB7141C4F9286003D9927 /* endPoint@2x.png */,
+				DFCFB7151C4F9286003D9927 /* startPoint.png */,
+				DFCFB7161C4F9286003D9927 /* startPoint@2x.png */,
+				DF1D05871C4CC56500173FA4 /* CustomNavigationBar */,
+				DF3172761C4C8D0100E6FD8D /* Global.h */,
+				DF3172771C4C8D0100E6FD8D /* Global.m */,
+				DF1D059B1C4CCD4F00173FA4 /* BaseViewController.h */,
+				DF1D059C1C4CCD4F00173FA4 /* BaseViewController.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +305,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1D05B41C4CF0FE00173FA4 /* AMap.bundle in Resources */,
 				DF31726D1C4C886300E6FD8D /* LaunchScreen.storyboard in Resources */,
+				DF1D05BA1C4CF2F400173FA4 /* compass@3x.png in Resources */,
+				DFCFB7191C4F9286003D9927 /* startPoint.png in Resources */,
 				DF31726A1C4C886300E6FD8D /* Assets.xcassets in Resources */,
+				DFCFB7171C4F9286003D9927 /* endPoint.png in Resources */,
+				DFCFB71A1C4F9286003D9927 /* startPoint@2x.png in Resources */,
+				DFCFB7181C4F9286003D9927 /* endPoint@2x.png in Resources */,
+				DF1D05B91C4CF2F400173FA4 /* compass@2x.png in Resources */,
+				DF1D05A51C4CDB7100173FA4 /* TestViewController.xib in Resources */,
+				DF1D05B81C4CF2F400173FA4 /* compass.png in Resources */,
 				DF3172681C4C886300E6FD8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +327,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3172781C4C8D0100E6FD8D /* Global.m in Sources */,
+				DF1D05A41C4CDB7100173FA4 /* TestViewController.m in Sources */,
+				DF1D05951C4CC59700173FA4 /* CustomNaviBarSearchController.m in Sources */,
+				DF1D05C81C4DE24F00173FA4 /* AMapViewListenerImpl.m in Sources */,
+				DF1D059D1C4CCD4F00173FA4 /* BaseViewController.m in Sources */,
+				DF1D05941C4CC59700173FA4 /* CustomNaviBarView.m in Sources */,
+				DFCFB7121C4F8D5F003D9927 /* CommonUtility.m in Sources */,
+				DF1D05931C4CC59700173FA4 /* UtilityFunc.m in Sources */,
+				DF1D05971C4CC59700173FA4 /* CustomViewController.m in Sources */,
+				DF1D059A1C4CC93700173FA4 /* AppNavigationController.m in Sources */,
+				DFCFB70D1C4F8D04003D9927 /* MANaviPolyline.m in Sources */,
 				DF3172651C4C886300E6FD8D /* ViewController.m in Sources */,
 				DF3172621C4C886300E6FD8D /* AppDelegate.m in Sources */,
+				DFCFB70E1C4F8D04003D9927 /* MANaviAnnotation.m in Sources */,
+				DF1D05C21C4DDF0D00173FA4 /* POIAnnotation.m in Sources */,
+				DF1D05961C4CC59700173FA4 /* CustomNavigationController.m in Sources */,
 				DF31725F1C4C886300E6FD8D /* main.m in Sources */,
+				DF1D05C51C4DE07F00173FA4 /* AMapSearchListenerImpl.m in Sources */,
+				DFCFB70F1C4F8D04003D9927 /* LineDashPolyline.m in Sources */,
+				DFCFB70C1C4F8D04003D9927 /* MANaviRoute.m in Sources */,
+				DF1D05A01C4CDA0D00173FA4 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +457,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/solveproblems",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/solveproblems/solveproblems-Prefix.pch";
 				INFOPLIST_FILE = solveproblems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.horizon.solveproblems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +474,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/solveproblems",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/solveproblems/solveproblems-Prefix.pch";
 				INFOPLIST_FILE = solveproblems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.horizon.solveproblems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +506,7 @@
 				DF3172731C4C886300E6FD8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
