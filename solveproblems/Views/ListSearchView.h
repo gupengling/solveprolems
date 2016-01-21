@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^ListSearchBlock)();
 @interface ListSearchView : UIView
-
+- (void)reloadData:(NSMutableArray *)data;
+- (void)setBlocksForBack:(ListSearchBlock)back;
 @end

@@ -46,6 +46,16 @@
 		DFCFB7181C4F9286003D9927 /* endPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7141C4F9286003D9927 /* endPoint@2x.png */; };
 		DFCFB7191C4F9286003D9927 /* startPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7151C4F9286003D9927 /* startPoint.png */; };
 		DFCFB71A1C4F9286003D9927 /* startPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7161C4F9286003D9927 /* startPoint@2x.png */; };
+		DFCFB71D1C50C846003D9927 /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB71B1C50C846003D9927 /* man.png */; };
+		DFCFB71E1C50C846003D9927 /* man@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB71C1C50C846003D9927 /* man@2x.png */; };
+		DFCFB7231C50C894003D9927 /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB71F1C50C894003D9927 /* bus.png */; };
+		DFCFB7241C50C894003D9927 /* bus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7201C50C894003D9927 /* bus@2x.png */; };
+		DFCFB7251C50C894003D9927 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7211C50C894003D9927 /* car.png */; };
+		DFCFB7261C50C894003D9927 /* car@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7221C50C894003D9927 /* car@2x.png */; };
+		DFCFB7291C50C8B3003D9927 /* userPosition.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7271C50C8B3003D9927 /* userPosition.png */; };
+		DFCFB72A1C50C8B3003D9927 /* userPosition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7281C50C8B3003D9927 /* userPosition@2x.png */; };
+		DFCFB72F1C50D32C003D9927 /* ListSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB72E1C50D32C003D9927 /* ListSearchView.m */; };
+		DFCFB7321C50DA93003D9927 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7311C50DA93003D9927 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +122,18 @@
 		DFCFB7141C4F9286003D9927 /* endPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "endPoint@2x.png"; sourceTree = "<group>"; };
 		DFCFB7151C4F9286003D9927 /* startPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startPoint.png; sourceTree = "<group>"; };
 		DFCFB7161C4F9286003D9927 /* startPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startPoint@2x.png"; sourceTree = "<group>"; };
+		DFCFB71B1C50C846003D9927 /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
+		DFCFB71C1C50C846003D9927 /* man@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man@2x.png"; sourceTree = "<group>"; };
+		DFCFB71F1C50C894003D9927 /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
+		DFCFB7201C50C894003D9927 /* bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus@2x.png"; sourceTree = "<group>"; };
+		DFCFB7211C50C894003D9927 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		DFCFB7221C50C894003D9927 /* car@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car@2x.png"; sourceTree = "<group>"; };
+		DFCFB7271C50C8B3003D9927 /* userPosition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPosition.png; sourceTree = "<group>"; };
+		DFCFB7281C50C8B3003D9927 /* userPosition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userPosition@2x.png"; sourceTree = "<group>"; };
+		DFCFB72D1C50D32C003D9927 /* ListSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSearchView.h; sourceTree = "<group>"; };
+		DFCFB72E1C50D32C003D9927 /* ListSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSearchView.m; sourceTree = "<group>"; };
+		DFCFB7301C50DA93003D9927 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		DFCFB7311C50DA93003D9927 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +219,8 @@
 		DF31725C1C4C886300E6FD8D /* solveproblems */ = {
 			isa = PBXGroup;
 			children = (
+				DFCFB72B1C50D30C003D9927 /* ViewControllers */,
+				DFCFB72C1C50D30C003D9927 /* Views */,
 				DF1D05B31C4CF0FE00173FA4 /* AMap.bundle */,
 				DF1D05AA1C4CE26700173FA4 /* AMapSearchKit.framework */,
 				DF1D05A81C4CE25100173FA4 /* MAMapKit.framework */,
@@ -235,6 +259,14 @@
 				DF1D05B51C4CF2F400173FA4 /* compass.png */,
 				DF1D05B61C4CF2F400173FA4 /* compass@2x.png */,
 				DF1D05B71C4CF2F400173FA4 /* compass@3x.png */,
+				DFCFB7271C50C8B3003D9927 /* userPosition.png */,
+				DFCFB7281C50C8B3003D9927 /* userPosition@2x.png */,
+				DFCFB71B1C50C846003D9927 /* man.png */,
+				DFCFB71C1C50C846003D9927 /* man@2x.png */,
+				DFCFB71F1C50C894003D9927 /* bus.png */,
+				DFCFB7201C50C894003D9927 /* bus@2x.png */,
+				DFCFB7211C50C894003D9927 /* car.png */,
+				DFCFB7221C50C894003D9927 /* car@2x.png */,
 				DFCFB7131C4F9286003D9927 /* endPoint.png */,
 				DFCFB7141C4F9286003D9927 /* endPoint@2x.png */,
 				DFCFB7151C4F9286003D9927 /* startPoint.png */,
@@ -246,6 +278,24 @@
 				DF1D059C1C4CCD4F00173FA4 /* BaseViewController.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DFCFB72B1C50D30C003D9927 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFCFB7301C50DA93003D9927 /* SettingViewController.h */,
+				DFCFB7311C50DA93003D9927 /* SettingViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DFCFB72C1C50D30C003D9927 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFCFB72D1C50D32C003D9927 /* ListSearchView.h */,
+				DFCFB72E1C50D32C003D9927 /* ListSearchView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,16 +355,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCFB7291C50C8B3003D9927 /* userPosition.png in Resources */,
+				DFCFB7251C50C894003D9927 /* car.png in Resources */,
+				DFCFB7231C50C894003D9927 /* bus.png in Resources */,
+				DFCFB7241C50C894003D9927 /* bus@2x.png in Resources */,
 				DF1D05B41C4CF0FE00173FA4 /* AMap.bundle in Resources */,
 				DF31726D1C4C886300E6FD8D /* LaunchScreen.storyboard in Resources */,
 				DF1D05BA1C4CF2F400173FA4 /* compass@3x.png in Resources */,
+				DFCFB71E1C50C846003D9927 /* man@2x.png in Resources */,
 				DFCFB7191C4F9286003D9927 /* startPoint.png in Resources */,
 				DF31726A1C4C886300E6FD8D /* Assets.xcassets in Resources */,
 				DFCFB7171C4F9286003D9927 /* endPoint.png in Resources */,
 				DFCFB71A1C4F9286003D9927 /* startPoint@2x.png in Resources */,
 				DFCFB7181C4F9286003D9927 /* endPoint@2x.png in Resources */,
+				DFCFB71D1C50C846003D9927 /* man.png in Resources */,
 				DF1D05B91C4CF2F400173FA4 /* compass@2x.png in Resources */,
 				DF1D05A51C4CDB7100173FA4 /* TestViewController.xib in Resources */,
+				DFCFB72A1C50C8B3003D9927 /* userPosition@2x.png in Resources */,
+				DFCFB7261C50C894003D9927 /* car@2x.png in Resources */,
 				DF1D05B81C4CF2F400173FA4 /* compass.png in Resources */,
 				DF3172681C4C886300E6FD8D /* Main.storyboard in Resources */,
 			);
@@ -337,6 +395,7 @@
 				DF1D05931C4CC59700173FA4 /* UtilityFunc.m in Sources */,
 				DF1D05971C4CC59700173FA4 /* CustomViewController.m in Sources */,
 				DF1D059A1C4CC93700173FA4 /* AppNavigationController.m in Sources */,
+				DFCFB7321C50DA93003D9927 /* SettingViewController.m in Sources */,
 				DFCFB70D1C4F8D04003D9927 /* MANaviPolyline.m in Sources */,
 				DF3172651C4C886300E6FD8D /* ViewController.m in Sources */,
 				DF3172621C4C886300E6FD8D /* AppDelegate.m in Sources */,
@@ -345,6 +404,7 @@
 				DF1D05961C4CC59700173FA4 /* CustomNavigationController.m in Sources */,
 				DF31725F1C4C886300E6FD8D /* main.m in Sources */,
 				DF1D05C51C4DE07F00173FA4 /* AMapSearchListenerImpl.m in Sources */,
+				DFCFB72F1C50D32C003D9927 /* ListSearchView.m in Sources */,
 				DFCFB70F1C4F8D04003D9927 /* LineDashPolyline.m in Sources */,
 				DFCFB70C1C4F8D04003D9927 /* MANaviRoute.m in Sources */,
 				DF1D05A01C4CDA0D00173FA4 /* HomeViewController.m in Sources */,

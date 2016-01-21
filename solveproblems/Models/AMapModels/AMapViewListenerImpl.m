@@ -32,6 +32,10 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
 //    mapView.userLocation
 //    NSLog(@"title %@ ; subtitle %@; lat %f; lon %f",mapView.userLocation.title,mapView.userLocation.subtitle,mapView.userLocation.location.coordinate.latitude,mapView.userLocation.location.coordinate.longitude);
     
+    NSLog(@"%f",self.zoomLevel);
+    NSLog(@"%f",self.maxZoomLevel);
+    NSLog(@"%f",self.minZoomLevel);
+    [self setZoomLevel:17 animated:YES];
 }
 - (void)mapViewDidStopLocatingUser:(MAMapView *)mapView {
     
@@ -52,12 +56,8 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
     {
         POIAnnotation *poiAnnotation = (POIAnnotation*)annotation;
         
-        //将两点加入地图
-        [self addDefaultAnnotations:poiAnnotation.coordinate];
-        
-        //步行路径规划
-        [[GLOBAL search] clearRoute];
-        [self searchRoutePlanningWalk];
+        //去往某处
+        [self toAnnotations:poiAnnotation.coordinate];
         
 //        PoiDetailViewController *detail = [[PoiDetailViewController alloc] init];
 //        detail.poi = poiAnnotation.poi;
@@ -196,6 +196,7 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
 /* 步行路径规划搜索. */
 - (void)searchRoutePlanningWalk
 {
+    
     AMapWalkingRouteSearchRequest *navi = [[AMapWalkingRouteSearchRequest alloc] init];
     
     /* 提供备选方案*/
@@ -210,5 +211,19 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
     
     [[GLOBAL search] AMapWalkingRouteSearch:navi];
 }
+- (void)removeAllAnnotations {
+    [self removeAnnotations:self.annotations];
+}
+/**去往何处 的路径*/
+- (void)toAnnotations:(CLLocationCoordinate2D)toplace {
+    
+    [[GLOBAL search] clearRoute];
+    [self removeAllAnnotations];
+    
+    //将两点加入地图
+    [self addDefaultAnnotations:toplace];
+    //步行路径规划
+    [self searchRoutePlanningWalk];
 
+}
 @end

@@ -35,7 +35,11 @@ GPL_M_SINGLETON(Global);
 - (AMapViewListenerImpl *)mapView {
     if (_mapView == nil) {
 //        _mapView = [[MAMapView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        _mapView = [[AMapViewListenerImpl alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        CGRect rect = [UIScreen mainScreen].bounds;
+        rect.origin.y += 65;
+        rect.size.height -= 65;
+        
+        _mapView = [[AMapViewListenerImpl alloc] initWithFrame:rect];
         [_mapView setCompassImage:[UIImage imageNamed:@"compass"]];
 
 //        if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
@@ -273,8 +277,6 @@ GPL_M_SINGLETON(Global);
 /* 根据关键字来搜索POI. */
 - (void)searchPoiByKeyword
 {
-    [self.mapView removeAnnotations:self.mapView.annotations];
-
     AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
     
     request.keywords            = @"上海大学";
@@ -294,8 +296,9 @@ GPL_M_SINGLETON(Global);
 {
     AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
     
-    request.location            = [AMapGeoPoint locationWithLatitude:39.990459 longitude:116.481476];
-    request.keywords            = @"电影院";
+//    request.location            = [AMapGeoPoint locationWithLatitude:39.990459 longitude:116.481476];
+    request.location            = [AMapGeoPoint locationWithLatitude:self.mapView.userLocation.coordinate.latitude longitude:self.mapView.userLocation.coordinate.longitude];
+    request.keywords            = @"厕所|洗手间|酒店";//@"电影院";
     /* 按照距离排序. */
     request.sortrule            = 0;
     request.requireExtension    = YES;

@@ -10,5 +10,7 @@
 #import <MAMapKit/MAMapKit.h>
 
 @interface AMapViewListenerImpl : MAMapView<MAMapViewDelegate>
-
+- (void)removeAllAnnotations;
+/**去往何处 的路径*/
+- (void)toAnnotations:(CLLocationCoordinate2D)toplace;
 @end

@@ -23,6 +23,8 @@ typedef NS_ENUM(NSInteger, AMapRoutePlanningType)
 /* 用于显示当前路线方案. */
 @property (nonatomic, strong) MANaviRoute * naviRoute;
 @property (nonatomic, strong) AMapRoute *route;
+
+@property (nonatomic, strong) NSMutableArray *oldAnnotations;//搜索到的数据
 /* 清空地图上已有的路线. */
 - (void)clearRoute;
 @end

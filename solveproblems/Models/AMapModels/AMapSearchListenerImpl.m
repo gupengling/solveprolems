@@ -19,6 +19,7 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        _oldAnnotations = [NSMutableArray array];
         [self setDelegate:self];
     }
     return self;
@@ -45,6 +46,9 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
 /* POI 搜索回调. */
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
 {
+    NSLog(@"offset = %ld",(long)request.offset)
+    NSLog(@"page = %ld",(long)request.page);
+    [_oldAnnotations removeAllObjects];
     if (response.pois.count == 0)
     {
         return;
@@ -57,6 +61,7 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
         [poiAnnotations addObject:[[POIAnnotation alloc] initWithPOI:obj]];
         
     }];
+    [_oldAnnotations addObjectsFromArray:poiAnnotations];
     
     /* 将结果以annotation的形式加载到地图上. */
     [[GLOBAL mapView] addAnnotations:poiAnnotations];
@@ -69,7 +74,7 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
     /* 如果有多个结果, 设置地图使所有的annotation都可见. */
     else
     {
-        [[GLOBAL mapView] showAnnotations:poiAnnotations animated:NO];
+        [[GLOBAL mapView] showAnnotations:poiAnnotations animated:YES];
     }
 }
 /* 路径规划搜索回调. */
