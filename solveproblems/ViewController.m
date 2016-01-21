@@ -29,7 +29,6 @@
     [GLOBAL mapView].showsCompass = YES;
 
     NSLog(@"dev test");
-    NSLog(@"dev test 2");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
