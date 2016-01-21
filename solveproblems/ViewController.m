@@ -28,6 +28,7 @@
     [GLOBAL mapView].showsScale = YES;
     [GLOBAL mapView].showsCompass = YES;
 
+    NSLog(@"dev test");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
