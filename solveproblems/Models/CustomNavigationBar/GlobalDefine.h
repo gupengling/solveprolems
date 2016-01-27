@@ -97,6 +97,15 @@
 #define FlushPool(p)                        [p drain]; p = [[NSAutoreleasePool alloc] init]
 #define RGB(r, g, b)                        [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
 #define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+// RGB颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue)\
+\
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+
 #define StatusBarHeight                     [UIApplication sharedApplication].statusBarFrame.size.height
 #define SelfDefaultToolbarHeight            self.navigationController.navigationBar.frame.size.height
 #define IOSVersion                          [[[UIDevice currentDevice] systemVersion] floatValue]

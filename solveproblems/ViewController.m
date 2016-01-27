@@ -10,14 +10,59 @@
 #import "CustomNaviBarView.h"
 
 #import "ListSearchView.h"
+#import "RKTabView.h"
 
 @interface ViewController ()<MAMapViewDelegate, AMapSearchDelegate>
 @property (nonatomic, readonly) UIButton *btnNaviRight;
 
 @property (nonatomic, strong) ListSearchView *vList;
+
+@property (nonatomic, strong) RKTabView* tabViewSocial;
+
 @end
 
 @implementation ViewController
+
+//tabbar menu
+- (RKTabView *)tabViewSocial {
+    if (_tabViewSocial == nil) {
+        CGRect rect = [UIScreen mainScreen].bounds;
+
+        RKTabItem *tabItemLoc = [RKTabItem createButtonItemWithImage:[UIImage imageNamed:@"location"] target:self selector:@selector(buttonTabPressed:)];
+        tabItemLoc.titleString = @"定位";
+
+        RKTabItem *tabItemAdd = [RKTabItem createButtonItemWithImage:[UIImage imageNamed:@"add"] target:self selector:@selector(buttonTabPressed:)];
+        tabItemAdd.titleString = @"添加";
+        
+        RKTabItem *tabItemSet = [RKTabItem createButtonItemWithImage:[UIImage imageNamed:@"set"] target:self selector:@selector(buttonTabPressed:)];
+        tabItemSet.titleString = @"设置";
+        
+        _tabViewSocial = [[RKTabView alloc] initWithFrame:CGRectMake(0, rect.size.height - 60, rect.size.width, 50) andTabItems:@[tabItemLoc,tabItemAdd,tabItemSet]];
+        
+////        间距
+//        float w = (self.view.bounds.size.width-50*3)/2.;
+//        _tabViewSocial.horizontalInsets = HorizontalEdgeInsetsMake(w, w);
+        
+        _tabViewSocial.horizontalInsets = HorizontalEdgeInsetsMake(100, 100);
+        _tabViewSocial.drawSeparators = NO;
+//        _tabViewSocial.enabledTabBackgrondColor = [UIColor colorWithRed:103.0f/256.0f green:87.0f/256.0f blue:226.0f/256.0f alpha:0.5];
+        _tabViewSocial.enabledTabBackgrondColor = [UIColor colorWithWhite:1.f alpha:0.95f];
+
+//        self.titledTabsView.horizontalInsets = HorizontalEdgeInsetsMake(25, 25);
+        _tabViewSocial.titlesFontColor = UIColorFromRGB(0xffa846);
+        _tabViewSocial.titlesFont = [UIFont boldSystemFontOfSize:10];
+        
+        _tabViewSocial.backgroundColor = [UIColor clearColor];
+
+    }
+    return _tabViewSocial;
+}
+#pragma mark - Button handler
+
+- (void)buttonTabPressed:(id)sender {
+    
+}
+
 
 - (UIView *)vList {
     if (_vList == nil) {
@@ -49,6 +94,8 @@
     NSLog(@"dev test");
     [self initUI];
     [self bringNaviBarToTopmost];
+    
+    [self.view addSubview:self.tabViewSocial];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -71,8 +118,7 @@
     _btnNaviRight = [CustomNaviBarView createNormalNaviBarBtnByTitle:@"地图" target:self action:@selector(btnNext:)];
     [self setNaviBarRightBtn:_btnNaviRight];
 }
-- (void)btnNext:(id)sender {
-    
+- (void)changeToSwitchView {
     UIView *fromv = nil;
     UIView *tov = nil;
     UIViewAnimationOptions options = UIViewAnimationOptionTransitionNone;
@@ -83,7 +129,7 @@
         [_btnNaviRight setTitle:@"地图" forState:UIControlStateNormal];
         
         
-
+        
     }else {
         fromv = self.vList;
         tov = [GLOBAL mapView];
@@ -96,6 +142,11 @@
         NSLog(@"tov-->%@",tov.superview);
         [self.vList reloadData:[[GLOBAL search] oldAnnotations]];
     }];
+}
+- (void)btnNext:(id)sender {
+    
+    
+    
     
 //    [[[GLOBAL search] oldAnnotations] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //        

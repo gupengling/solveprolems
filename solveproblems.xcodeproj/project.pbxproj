@@ -56,6 +56,8 @@
 		DFCFB72A1C50C8B3003D9927 /* userPosition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCFB7281C50C8B3003D9927 /* userPosition@2x.png */; };
 		DFCFB72F1C50D32C003D9927 /* ListSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB72E1C50D32C003D9927 /* ListSearchView.m */; };
 		DFCFB7321C50DA93003D9927 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7311C50DA93003D9927 /* SettingViewController.m */; };
+		DFCFB7421C58ADD9003D9927 /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB73F1C58ADD9003D9927 /* RKTabItem.m */; };
+		DFCFB7431C58ADD9003D9927 /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB7411C58ADD9003D9927 /* RKTabView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,10 @@
 		DFCFB72E1C50D32C003D9927 /* ListSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSearchView.m; sourceTree = "<group>"; };
 		DFCFB7301C50DA93003D9927 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		DFCFB7311C50DA93003D9927 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		DFCFB73E1C58ADD9003D9927 /* RKTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabItem.h; sourceTree = "<group>"; };
+		DFCFB73F1C58ADD9003D9927 /* RKTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabItem.m; sourceTree = "<group>"; };
+		DFCFB7401C58ADD9003D9927 /* RKTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabView.h; sourceTree = "<group>"; };
+		DFCFB7411C58ADD9003D9927 /* RKTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +261,7 @@
 		DF3172751C4C8CDF00E6FD8D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DFCFB73D1C58ADCD003D9927 /* RKTabView */,
 				DF1D05BF1C4DDF0700173FA4 /* AMapModels */,
 				DF1D05B51C4CF2F400173FA4 /* compass.png */,
 				DF1D05B61C4CF2F400173FA4 /* compass@2x.png */,
@@ -296,6 +303,17 @@
 				DFCFB72E1C50D32C003D9927 /* ListSearchView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DFCFB73D1C58ADCD003D9927 /* RKTabView */ = {
+			isa = PBXGroup;
+			children = (
+				DFCFB73E1C58ADD9003D9927 /* RKTabItem.h */,
+				DFCFB73F1C58ADD9003D9927 /* RKTabItem.m */,
+				DFCFB7401C58ADD9003D9927 /* RKTabView.h */,
+				DFCFB7411C58ADD9003D9927 /* RKTabView.m */,
+			);
+			path = RKTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +408,7 @@
 				DF1D05951C4CC59700173FA4 /* CustomNaviBarSearchController.m in Sources */,
 				DF1D05C81C4DE24F00173FA4 /* AMapViewListenerImpl.m in Sources */,
 				DF1D059D1C4CCD4F00173FA4 /* BaseViewController.m in Sources */,
+				DFCFB7431C58ADD9003D9927 /* RKTabView.m in Sources */,
 				DF1D05941C4CC59700173FA4 /* CustomNaviBarView.m in Sources */,
 				DFCFB7121C4F8D5F003D9927 /* CommonUtility.m in Sources */,
 				DF1D05931C4CC59700173FA4 /* UtilityFunc.m in Sources */,
@@ -402,6 +421,7 @@
 				DFCFB70E1C4F8D04003D9927 /* MANaviAnnotation.m in Sources */,
 				DF1D05C21C4DDF0D00173FA4 /* POIAnnotation.m in Sources */,
 				DF1D05961C4CC59700173FA4 /* CustomNavigationController.m in Sources */,
+				DFCFB7421C58ADD9003D9927 /* RKTabItem.m in Sources */,
 				DF31725F1C4C886300E6FD8D /* main.m in Sources */,
 				DF1D05C51C4DE07F00173FA4 /* AMapSearchListenerImpl.m in Sources */,
 				DFCFB72F1C50D32C003D9927 /* ListSearchView.m in Sources */,
