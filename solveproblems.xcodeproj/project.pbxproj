@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0CE2B21C59C10B00524DE2 /* UIColor+Normal.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0CE2B11C59C10B00524DE2 /* UIColor+Normal.m */; };
+		DF0CE2B51C59F54700524DE2 /* UIView+Normal.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0CE2B41C59F54700524DE2 /* UIView+Normal.m */; };
 		DF1D05931C4CC59700173FA4 /* UtilityFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D058A1C4CC59700173FA4 /* UtilityFunc.m */; };
 		DF1D05941C4CC59700173FA4 /* CustomNaviBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D058C1C4CC59700173FA4 /* CustomNaviBarView.m */; };
 		DF1D05951C4CC59700173FA4 /* CustomNaviBarSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1D058E1C4CC59700173FA4 /* CustomNaviBarSearchController.m */; };
@@ -61,6 +63,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF0CE2B01C59C10B00524DE2 /* UIColor+Normal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Normal.h"; sourceTree = "<group>"; };
+		DF0CE2B11C59C10B00524DE2 /* UIColor+Normal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Normal.m"; sourceTree = "<group>"; };
+		DF0CE2B31C59F54700524DE2 /* UIView+Normal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Normal.h"; sourceTree = "<group>"; };
+		DF0CE2B41C59F54700524DE2 /* UIView+Normal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Normal.m"; sourceTree = "<group>"; };
 		DF1D05881C4CC59700173FA4 /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		DF1D05891C4CC59700173FA4 /* UtilityFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityFunc.h; sourceTree = "<group>"; };
 		DF1D058A1C4CC59700173FA4 /* UtilityFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityFunc.m; sourceTree = "<group>"; };
@@ -283,6 +289,10 @@
 				DF3172771C4C8D0100E6FD8D /* Global.m */,
 				DF1D059B1C4CCD4F00173FA4 /* BaseViewController.h */,
 				DF1D059C1C4CCD4F00173FA4 /* BaseViewController.m */,
+				DF0CE2B01C59C10B00524DE2 /* UIColor+Normal.h */,
+				DF0CE2B11C59C10B00524DE2 /* UIColor+Normal.m */,
+				DF0CE2B31C59F54700524DE2 /* UIView+Normal.h */,
+				DF0CE2B41C59F54700524DE2 /* UIView+Normal.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -403,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0CE2B51C59F54700524DE2 /* UIView+Normal.m in Sources */,
 				DF3172781C4C8D0100E6FD8D /* Global.m in Sources */,
 				DF1D05A41C4CDB7100173FA4 /* TestViewController.m in Sources */,
 				DF1D05951C4CC59700173FA4 /* CustomNaviBarSearchController.m in Sources */,
@@ -427,6 +438,7 @@
 				DFCFB72F1C50D32C003D9927 /* ListSearchView.m in Sources */,
 				DFCFB70F1C4F8D04003D9927 /* LineDashPolyline.m in Sources */,
 				DFCFB70C1C4F8D04003D9927 /* MANaviRoute.m in Sources */,
+				DF0CE2B21C59C10B00524DE2 /* UIColor+Normal.m in Sources */,
 				DF1D05A01C4CDA0D00173FA4 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -302,7 +302,7 @@ GPL_M_SINGLETON(Global);
     /* 按照距离排序. */
     request.sortrule            = 0;
     request.requireExtension    = YES;
-    request.page = 2;
+    request.page = 1;
     
     [self.search AMapPOIAroundSearch:request];
 }

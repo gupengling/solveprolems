@@ -11,6 +11,12 @@
 
 #import "ListSearchView.h"
 #import "RKTabView.h"
+typedef NS_ENUM(NSInteger, ItemType)
+{
+    ItemTypeLoc = 0,
+    ItemTypeAdd,
+    ItemTypeSet
+};
 
 @interface ViewController ()<MAMapViewDelegate, AMapSearchDelegate>
 @property (nonatomic, readonly) UIButton *btnNaviRight;
@@ -37,22 +43,31 @@
         RKTabItem *tabItemSet = [RKTabItem createButtonItemWithImage:[UIImage imageNamed:@"set"] target:self selector:@selector(buttonTabPressed:)];
         tabItemSet.titleString = @"设置";
         
-        _tabViewSocial = [[RKTabView alloc] initWithFrame:CGRectMake(0, rect.size.height - 60, rect.size.width, 50) andTabItems:@[tabItemLoc,tabItemAdd,tabItemSet]];
+        
+        _tabViewSocial = [[RKTabView alloc] initWithFrame:CGRectMake(80, rect.size.height - 60, rect.size.width-160, 50) andTabItems:@[tabItemLoc,tabItemAdd,tabItemSet]];
         
 ////        间距
-//        float w = (self.view.bounds.size.width-50*3)/2.;
-//        _tabViewSocial.horizontalInsets = HorizontalEdgeInsetsMake(w, w);
-        
-        _tabViewSocial.horizontalInsets = HorizontalEdgeInsetsMake(100, 100);
+//        _tabViewSocial.horizontalInsets = HorizontalEdgeInsetsMake(100, 100);
         _tabViewSocial.drawSeparators = NO;
-//        _tabViewSocial.enabledTabBackgrondColor = [UIColor colorWithRed:103.0f/256.0f green:87.0f/256.0f blue:226.0f/256.0f alpha:0.5];
-        _tabViewSocial.enabledTabBackgrondColor = [UIColor colorWithWhite:1.f alpha:0.95f];
+        _tabViewSocial.enabledTabBackgrondColor = [UIColor clearColor];//[UIColor colorWithWhite:1.f alpha:0.95f];
 
 //        self.titledTabsView.horizontalInsets = HorizontalEdgeInsetsMake(25, 25);
-        _tabViewSocial.titlesFontColor = UIColorFromRGB(0xffa846);
+        _tabViewSocial.titlesFontColor = [UIColor titleColor];//UIColorFromRGB(0xffa846);
         _tabViewSocial.titlesFont = [UIFont boldSystemFontOfSize:10];
         
         _tabViewSocial.backgroundColor = [UIColor clearColor];
+        
+        
+        
+        //阴影加圆边
+        _tabViewSocial.layer.borderWidth  = 0;
+        _tabViewSocial.layer.cornerRadius = 4;
+        _tabViewSocial.layer.backgroundColor = [UIColor colorWithWhite:1.f alpha:0.9f].CGColor;
+        //    imageView.layer.borderColor= [[UIColor redColor] CGColor];
+        [_tabViewSocial.layer setShadowOffset:CGSizeMake(0, 0)];//表示四边
+        [_tabViewSocial.layer setShadowOpacity:0.6];
+        [_tabViewSocial.layer setShadowColor:[UIColor blackColor].CGColor];
+        _tabViewSocial.layer.masksToBounds = YES;
 
     }
     return _tabViewSocial;
@@ -60,17 +75,43 @@
 #pragma mark - Button handler
 
 - (void)buttonTabPressed:(id)sender {
-    
+    NSInteger tag = [(UIButton *)sender tag];
+    switch (tag) {
+        case ItemTypeLoc: {
+            //定位到当前位置
+            [[GLOBAL mapView] setCenterCoordinate:[GLOBAL mapView].userLocation.location.coordinate animated:YES];
+//            if ([GLOBAL mapView].userTrackingMode == MAUserTrackingModeFollow) {
+//                [GLOBAL mapView].userTrackingMode = MAUserTrackingModeFollowWithHeading;
+//            }else {
+//                [GLOBAL mapView].userTrackingMode = MAUserTrackingModeFollow;
+//            }
+
+            break;
+        }
+        case ItemTypeAdd: {
+            
+            break;
+        }
+        case ItemTypeSet: {
+            BaseVCInfo *info = [BaseVCInfo infoWithVCName:@"SettingViewController" storyboardName:@"Main" identifierName:@"SettingViewController"];
+            BaseViewController *vc = [BaseViewController vcWithVCInfo:info];
+            
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 
 - (UIView *)vList {
     if (_vList == nil) {
         CGRect rect = [UIScreen mainScreen].bounds;
-        rect.origin.y += 65;
-        rect.size.height -= 65;
+        rect.origin.y += self.viewNaviBar.frame.size.height;
+        rect.size.height -= self.viewNaviBar.frame.size.height;
         _vList = [[ListSearchView alloc] initWithFrame:rect];
-        
+        _vList.backgroundColor = [UIColor whiteColor];
         __strong ViewController *vcstrong = self;
         [_vList setBlocksForBack:^{
             __weak ViewController *vcweak = vcstrong;
@@ -79,24 +120,64 @@
     }
     return _vList;
 }
+- (void)showList:(BOOL)show {
+    CGFloat y = self.viewNaviBar.frame.size.height;
+    CGFloat ytab = ScreenHeight - 60;
+    
+    self.vList.hidden = NO;
+//    if (self.vList.frame.origin.y > 0){
+    if (show == NO) {
+        y = - self.vList.frame.size.height;
+    }else {
+        ytab = ScreenHeight+2;
+        [self.vList reloadData:[[GLOBAL search] oldAnnotations]];
+    }
+    
+    [UIView animateWithDuration:0.36 animations:^{
+        CGRect framevl = self.vList.frame;
+        framevl.origin.y = y;
+        [self.vList setFrame:framevl];
+        
+        CGRect frame = self.tabViewSocial.frame;
+        frame.origin.y = ytab;
+        [self.tabViewSocial setFrame:frame];
+    } completion:^(BOOL finished) {
+        self.vList.hidden = !show;
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self.view addSubview:self.vList];
     [self.view addSubview:[GLOBAL mapView]];
+
     [GLOBAL mapView].showsUserLocation = YES;
     [GLOBAL mapView].userTrackingMode = MAUserTrackingModeFollow;
     [GLOBAL mapView].showsScale = YES;
     [GLOBAL mapView].showsCompass = YES;
-
+//    [GLOBAL mapView].alpha = 0.3;
     NSLog(@"dev test");
+    
+    
+    [self.view addSubview:self.vList];
+
+    [self.view addSubview:self.tabViewSocial];
+
+    
+    [[GLOBAL mapView] sendSubviewToBack:self.vList];
+
+    
     [self initUI];
     [self bringNaviBarToTopmost];
     
-    [self.view addSubview:self.tabViewSocial];
+
+    [self showList:NO];
+    
+    
 }
+
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -109,13 +190,13 @@
 #pragma mark - CustomNaviBar UI
 - (void)initUI
 {
-    [self setNaviBarTitle:@"Choose"];    // 设置标题
+    [self setNaviBarTitle:@"Find"];    // 设置标题
     
     UIButton *btnLeft = [CustomNaviBarView createNormalNaviBarBtnByTitle:@"search" target:self action:@selector(btnLeft:)];
     [self setNaviBarLeftBtn:btnLeft];       // 若不需要默认的返回按钮，直接赋nil
     
     // 创建一个自定义的按钮，并添加到导航条右侧。
-    _btnNaviRight = [CustomNaviBarView createNormalNaviBarBtnByTitle:@"地图" target:self action:@selector(btnNext:)];
+    _btnNaviRight = [CustomNaviBarView createNormalNaviBarBtnByTitle:@"列表" target:self action:@selector(btnNext:)];
     [self setNaviBarRightBtn:_btnNaviRight];
 }
 - (void)changeToSwitchView {
@@ -128,25 +209,30 @@
         options = UIViewAnimationOptionTransitionFlipFromLeft;
         [_btnNaviRight setTitle:@"地图" forState:UIControlStateNormal];
         
-        
-        
+        self.tabViewSocial.hidden = YES;
     }else {
         fromv = self.vList;
         tov = [GLOBAL mapView];
         options = UIViewAnimationOptionTransitionFlipFromRight;
         [_btnNaviRight setTitle:@"列表" forState:UIControlStateNormal];
+        self.tabViewSocial.hidden = NO;
+        [self.view bringSubviewToFront:self.tabViewSocial];
     }
     [UIView transitionFromView:fromv toView:tov duration:0.36 options:options completion:^(BOOL finished) {
         [self bringNaviBarToTopmost];
         NSLog(@"fromv-->%@",fromv.superview);
         NSLog(@"tov-->%@",tov.superview);
-        [self.vList reloadData:[[GLOBAL search] oldAnnotations]];
+        if (self.vList.superview) {
+            [self.vList reloadData:[[GLOBAL search] oldAnnotations]];
+        }else {
+            [self.view bringSubviewToFront:self.tabViewSocial];
+        }
     }];
 }
 - (void)btnNext:(id)sender {
     
-    
-    
+//    [self changeToSwitchView];
+    [self showList:self.vList.hidden];
     
 //    [[[GLOBAL search] oldAnnotations] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //        
@@ -159,8 +245,6 @@
 }
 
 - (void)btnLeft:(id)sender {
-    //定位到当前位置
-    [[GLOBAL mapView] setCenterCoordinate:[GLOBAL mapView].userLocation.location.coordinate animated:YES];
 
     [[GLOBAL search] clearRoute];
     [[GLOBAL mapView] removeAllAnnotations];

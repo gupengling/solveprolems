@@ -35,7 +35,7 @@ const NSInteger RoutePlanningPaddingEdge                    = 20;
     NSLog(@"%f",self.zoomLevel);
     NSLog(@"%f",self.maxZoomLevel);
     NSLog(@"%f",self.minZoomLevel);
-    [self setZoomLevel:17 animated:YES];
+    [self setZoomLevel:18.3 animated:YES];
 }
 - (void)mapViewDidStopLocatingUser:(MAMapView *)mapView {
     

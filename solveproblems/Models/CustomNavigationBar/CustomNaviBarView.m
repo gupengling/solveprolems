@@ -60,7 +60,7 @@
 {
     UIButton *btn = [[self class] createImgNaviBarBtnByImgNormal:@"NaviBtn_Normal" imgHighlight:@"NaviBtn_Normal_H" target:target action:action];
     [btn setTitle:strTitle forState:UIControlStateNormal];
-    [btn setTitleColor:RGB_TextDark forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor titleColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:12.0f];
     [UtilityFunc label:btn.titleLabel setMiniFontSize:8.0f forNumberOfLines:1];
     
@@ -131,13 +131,13 @@
     
     _labelTitle = [[UILabel alloc] initWithFrame:CGRectZero];
     _labelTitle.backgroundColor = [UIColor clearColor];
-    _labelTitle.textColor = RGB_TitleNormal;
-    _labelTitle.font = [UIFont systemFontOfSize:FLOAT_TitleSizeNormal];
+    _labelTitle.textColor = [UIColor titleColor];
+    _labelTitle.font = [UIFont boldSystemFontOfSize:FLOAT_TitleSizeNormal];
     _labelTitle.textAlignment = NSTextAlignmentCenter;
     
     _imgViewBg = [[UIImageView alloc] initWithFrame:self.bounds];
     _imgViewBg.image = [[UIImage imageNamed:@"NaviBar_Bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    _imgViewBg.alpha = 0.98f;
+    _imgViewBg.alpha = 0.95f;
     
     if (_bIsBlur)
     {// iOS7可设置是否需要现实磨砂玻璃效果

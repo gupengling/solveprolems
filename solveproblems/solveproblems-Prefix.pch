@@ -14,7 +14,8 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+#import "UIColor+Normal.h"
+#import "UIView+Normal.h"
 #endif
 
 #ifndef solveproblems_Prefix_pch
@@ -56,6 +57,7 @@ static __class * __singleton__; \
 dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
 return __singleton__; \
 }
+
 
 
 /* 使用高德地图API，请注册Key，注册地址：http://lbs.amap.com/console/key */

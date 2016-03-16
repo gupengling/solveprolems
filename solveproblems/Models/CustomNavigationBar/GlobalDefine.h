@@ -106,6 +106,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 \
 alpha:1.0]
 
 
+
 #define StatusBarHeight                     [UIApplication sharedApplication].statusBarFrame.size.height
 #define SelfDefaultToolbarHeight            self.navigationController.navigationBar.frame.size.height
 #define IOSVersion                          [[[UIDevice currentDevice] systemVersion] floatValue]
